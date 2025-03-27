@@ -33,8 +33,8 @@ RESTful API/
 ├── handle_json.py # Module for reading/writing to the JSON database  
 ├── data_fetcher.py # Example script to interact with the API  
 ├── requests_get_demo.py # Example script to interact with a web page  
-├── README.md # You are here
-└── requisites.txt # Dependencies
+├── README.md # You are here  
+└── requisites.txt # Dependencies  
 
 ## Prerequisites
 
@@ -66,25 +66,25 @@ RESTful API/
 
 ## Setup and Running the API
 
-1.  **Clone the repository:** (If you have this project in a git repository)
-    ```bash
-    git clone <repository_url>
-    cd RESTful API
-    ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd RESTful API
-    ```
-3.  **Install the dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-4.  **Run the Flask application:**
-    ```bash
-    python app_first_api.py
-    ```
-    This will start the Flask development server. The API will be accessible at `http://127.0.0.1:5001/api/books`. The app will also open the url in your default browser.
-    The Port is set to 5001 for Mac User, but you can set it to 5000 as default.
+1.  **Clone the repository:** (If you have this project in a git repository)  
+    ```bash  
+    git clone <repository_url>  
+    cd RESTful API  
+    ```  
+2.  **Navigate to the project directory:**  
+    ```bash  
+    cd RESTful API  
+    ```  
+3.  **Install the dependencies:**  
+    ```bash  
+    pip install -r requirements.txt  
+    ```  
+4.  **Run the Flask application:**  
+    ```bash  
+    python app_first_api.py  
+    ```  
+    This will start the Flask development server. The API will be accessible at `http://127.0.0.1:5001/api/books`. The app will also open the url in your default browser.  
+    The Port is set to 5001 for Mac Users, but you can set it to 5000 as default.  
 
 ## Using the API
 
@@ -94,30 +94,30 @@ Here are some examples of how to interact with the API using `curl`, `data_fetch
 
 #### GET /api/books
 
-*   **Get all books:**
-    ```bash curl http://127.0.0.1:5001/api/books```
-*   **Get books by author:**
-    ```bash curl "http://127.0.0.1:5001/api/books?author=J.R.R.+Tolkien"```
-*   **Get paginated books (page 2, limit 5):**
-    ```bash curl "http://127.0.0.1:5001/api/books?page=2&limit=5"```
-*   **Get paginated books using data_fetcher.py:**
-    ```bash python data_fetcher.py```
-    This script will fetch all the books in pages of 5.
+*   **Get all books:**  
+    ```bash curl http://127.0.0.1:5001/api/books```  
+*   **Get books by author:**  
+    ```bash curl "http://127.0.0.1:5001/api/books?author=J.R.R.+Tolkien"```  
+*   **Get paginated books (page 2, limit 5):**  
+    ```bash curl "http://127.0.0.1:5001/api/books?page=2&limit=5"```  
+*   **Get paginated books using data_fetcher.py:**  
+    ```bash python data_fetcher.py```  
+    This script will fetch all the books in pages of 5.  
 
 #### POST /api/books
 
-*   **Add a new book:**
-    ```bash curl -X POST -H "Content-Type: application/json" -d '{"title": "New Book", "author": "New Author"}' http://127.0.0.1:5001/api/books```
+*   **Add a new book:**  
+    ```bash curl -X POST -H "Content-Type: application/json" -d '{"title": "New Book", "author": "New Author"}' http://127.0.0.1:5001/api/books```  
 
-#### PUT /api/books/<id>
+#### PUT /api/books/<id>  
 
-*   **Update a book (e.g., book with ID 1):**
-    ```bash curl -X PUT -H "Content-Type: application/json" -d '{"title": "Updated Book"}```
+*   **Update a book (e.g., book with ID 1):**  
+    ```bash curl -X PUT -H "Content-Type: application/json" -d '{"title": "Updated Book"}```  
 
-#### DELETE /api/books/<id>
+#### DELETE /api/books/<id>  
 
-*   **Delete a book (e.g., book with ID 1):**
-    ```bash curl -X DELETE http://127.0.0.1:5001/api/books/1```
+*   **Delete a book (e.g., book with ID 1):**  
+    ```bash curl -X DELETE http://127.0.0.1:5001/api/books/1```  
 
 
 ### Interacting with Postman
